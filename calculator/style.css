@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,6 @@ body {
   margin-bottom: 15px;
 }
 
-
 #display {
   background: #111;
   color: #0f0;
@@ -37,22 +37,17 @@ body {
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 15px;
-  overflow: hidden;
 }
 
-#display p {
-  margin: 0;
-}
 
-/* Grid dos botões */
 #botoes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-/* Botões padrão */
 .btn {
+  flex: 1 1 calc(25% - 10px); 
   padding: 15px;
   font-size: 1.2rem;
   border: none;
@@ -63,7 +58,6 @@ body {
   transition: 0.2s;
 }
 
-
 .btn:hover {
   background: #50506b;
 }
@@ -72,29 +66,24 @@ body {
   transform: scale(0.95);
 }
 
-
 .numero {
   background: #4a4a6a;
 }
 
 .operador {
   background: #ff9500;
-  color: #fff;
 }
-
-
-.igual {
-  background: #28a745;
-  grid-column: span 2;
-}
-
-
-#limpar {
-  background: #dc3545;
-  grid-column: span 2;
-}
-
 
 .decimal {
   background: #6c757d;
+}
+
+.igual {
+  background: #28a745;
+
+}
+
+#limpar {
+  background: #dc3545;
+  flex: 1 1 calc(50% - 10px)
 }
